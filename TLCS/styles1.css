@@ -1,0 +1,392 @@
+@font-face {
+  font-family: 'Typo Pixel';
+  src: url('typoPixel.ttf'), format('truetype');
+}
+
+@font-face {
+font-family: 'Press Start 2P';
+src: url('PressStart2P-Regular.ttf'), format('truetype');
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
+  background-color: rgb(10, 2, 33);
+  background-size: cover;
+  background-repeat: repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container {
+  padding: 20px; /* Add padding to create gaps on the sides */
+  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+.icon-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribute space between children */
+  width: 100%;
+  background-color: rgb(10, 2, 33);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  padding: 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.images-container {
+  position: relative; /* Ensure the container is positioned relative */
+  width: 100%;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-right: 30px;
+  margin-left: 15px;
+}
+
+.images img {
+  width: 1400px; /* Set the desired width */
+  height: 160px; /* Set the desired height */
+  margin: 10px; /* Add margin between images */
+  object-fit: cover; /* Ensure the image covers the entire area */
+}
+
+.planet {
+  position: absolute;
+  top: 60px; 
+  left: 150px;
+  transform: translateX(-50%); 
+  width: 230px;
+  height: 230px; 
+  z-index: 9;
+}
+
+.textbox {
+  position: absolute; /* Position the image absolutely within the .images-container */
+  top: 130px; /* Adjust the top position as needed */
+  background-image: url("flat-barFill.png");
+  left: 55%; /* Center the image horizontally */
+  transform: translateX(-50%); /* Center the image horizontally */
+  width: 1000px; /* Set the desired width */
+  height: 100px; /* Set the desired height */
+  display: flex; /* Use flexbox to center content */
+  z-index: 9; /* Ensure the image is on top */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+.textbox p {
+  font-size: 20px;
+  color: purple;
+  font-family: 'Press Start 2P';
+  text-align: center;
+  padding-left: 75px;
+  padding-right: 15px;
+}
+
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #ffbf00;
+  background-image: url('me.png');
+  background-position: center;
+  background-size: cover;
+  margin-left: 10px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 30px;
+  color: whitesmoke;
+  text-shadow: 2px 2px #333;
+  font-family: 'Typo Pixel';
+  text-align: left;
+}
+
+h3 {
+  font-size: 30px;
+  color: whitesmoke;
+  font-family: 'Press Start 2P';
+  flex-grow: 5;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0); 
+}
+
+h4 {
+  color: whitesmoke;
+  font-size: 1.5em;
+  text-shadow: 2px 2px #333;
+  font-family: 'Press Start 2P';
+}
+
+.nav-links {
+  display: flex; 
+  align-items: center; /* Align items vertically centered */
+  gap: 40px; /* Adjust gap between links */
+  margin-right: 50px;
+}
+
+.nav-links a {
+  font-weight: bold;
+  text-align: right;
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 20px; /* Make the links smaller */
+  font-family: 'Press Start 2P';
+}
+
+.nav-links a:hover {
+  color: #ffdd33;
+}
+
+/* title styling */
+.container {
+  background-color: rgb(10, 2, 33); /* Semi-transparent black */
+  font-family: 'Press Start 2P';
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  max-width: 1500px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 30px;
+  color: whitesmoke;
+  font-family: 'Typo Pixel';
+  margin-left: 30px; 
+  flex-grow: 2;
+  text-shadow: 2px 2px 5px rgb(0, 64, 255); 
+  text-decoration: none;
+}
+
+.title p {
+  color: #ffdd33;
+  font-size: 25px;
+  text-shadow: 2px 2px #333;
+  margin-bottom: 5px;
+  font-family: 'Press Start 2P';
+}
+
+.title h1 {
+  margin: 0;
+  font-size: 30px;
+  letter-spacing: 4px;
+  color: white;
+  font-family: 'Typo Pixel';
+  text-shadow: 2px 2px 5px rgb(0, 64, 255); 
+  text-align: center;
+}
+
+/* dashboard shitz */
+.dashboard-section {
+  margin-top: 20px;
+  color: #ffdd33;
+  font-family: "Press Start 2P";
+  padding: 10px;
+  width: 100%;
+  max-width: 1500px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.dashboard-section h2 {
+  margin-left: 100px; /* Align the heading with the course cards */
+}
+
+/* other shitz */
+/* Base class for common styles */
+.course-card {
+  justify-content: left;
+  padding: 35px;
+  border-radius: 30px;
+  margin-bottom: 15px;
+  margin-left: 100px;
+  margin-right: 100px;
+  color: #ffdd33;
+  text-align: left;
+  border: 3px solid #4733ff;
+  font-size: 0.75em;
+
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 15px rgba(255, 221, 51, 0.699);
+}
+
+.algebra {
+  background-image: url('Miami-synthx3.png');
+  background-position: center right;
+}
+
+.geometry {
+  background-image: url('stage-preview.png');
+}
+
+.progress-card {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  background-image: url('volcano.png');
+  background-size: cover; 
+  padding: 15px;
+  border-radius: 30px;
+  margin-bottom: 15px;
+  margin-left: 100px;
+  margin-right: 100px;
+  text-align: left;
+  border: 3px solid #4733ff;
+  font-size: 0.75em;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 20px rgba(255, 221, 51, 0.5);
+}
+
+.progress-section {
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+  margin: 10px;
+  padding: 10px;
+  width: 95%;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid #08027e;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+  gap: 10px; /* Space between the progress bar and the text */
+}
+
+.progress-bar {
+  position: relative; /* Ensure the progress element is positioned relative to this */
+  background-image: url('flat-bar.png'); /* Set the background image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 5px solid black;
+  width: 800px;
+  height: 60px;
+}
+
+.progress {
+  margin-top: 24px;
+  margin-left: 50px;
+  position: absolute; /* Position the progress element absolutely within the progress-bar */
+  top: 0;
+  left: 0;
+  height: 16px;
+  background-color: rgb(255, 128, 0);
+  width: 0; /* Set initial width to 0 */
+  transition: width 0.5s ease; /* Add transition for smooth progress */
+}
+
+.progress-text {
+  font-size: 20px;
+  flex-grow: 2;
+  text-shadow: 2px 2px 5px rgb(0, 64, 255); 
+  color: #ffdd33;
+  font-family: 'Press Start 2P';
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  height: 50px;
+  width: 50px;
+}
+/* buttonz */
+.resume-btn {
+  display: inline-block;
+  cursor: pointer;
+  font-family: 'Press Start 2P';
+  font-size: 12px;
+  color: purple;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100px;
+  height: 100px;
+  background-image: url('flat-button.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  text-align: center;
+  line-height: 100px;
+  box-shadow: 0px 0px 8px #190395;
+  border-radius: 20px;
+} 
+
+.profile-btn {
+  display: inline-block;
+  cursor: pointer;
+  font-family: 'Press Start 2P';
+  font-size: 12px;
+  color: black;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 200px;
+  height: 50px;
+  background-image: url('flat-rectangle.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 5px solid black;
+  text-align: center;
+  box-shadow: 0px 0px 8px #190395;
+}
+
+.resume-btn:hover, .profile-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 8px #190395;
+}
+
+/* build card */
+.build-card {
+color: #ffdd33;
+border: 1px dashed #ffdd33;
+text-align: center;
+padding: 20px;
+width: 1180px;
+margin-bottom: 15px;
+margin-left: 100px;
+border-radius: 8px;
+transition: background-color 0.3s;
+}
+
+.build-card:hover {
+box-shadow: #555;
+}
+
+.character {
+  background-image: url('transparent-preview.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 200px;
+}
+
+.progress-text {
+  display: flex;
+  flex-direction: column; /* Stack the text elements vertically */
+  font-size: 1.5em;
+  gap: 10px; /* Space between progress items */
+}
+
+.progress-item {
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+  gap: 10px; /* Space between icon and text */
+}
